@@ -1,0 +1,19 @@
+body {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.productos{
+    border: 2px thick black;
+    background-color: aquamarine;
+    
+    
+    
+}
+
+.botonn{
+    border-radius: 5px;
+    border-color: aquamarine;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
