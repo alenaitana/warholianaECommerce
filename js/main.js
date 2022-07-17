@@ -32,6 +32,7 @@ function mostrarProductos(productos) {
             const botonAgregarAlCarrito = document.createElement("button")
             botonAgregarAlCarrito.innerText = "Agregar al Carrito"
             botonAgregarAlCarrito.addEventListener("click",() => {
+              
                 agregarAlCarrito(producto);
             })
 
@@ -51,7 +52,14 @@ function agregarAlCarrito(producto){
 }
 
 document.getElementById("ver-carrito").addEventListener("click", verCarrito)
+document.getElementById('ver-carrito').onclick = () => {
+    Swal.fire({
+        text: 'Estos son tus productos!',
+        icon: 'success',
+        confirmButtonText: 'Entendido'
 
+      })
+}
 function verCarrito(){
     let carrito = JSON.parse(localStorage.getItem("carrito"))
     if (carrito == null){
@@ -61,6 +69,7 @@ function verCarrito(){
 }
 
 document.getElementById("ver-catalogo").addEventListener("click", ()=>{
+   
     mostrarProductos(productos);
 });
 
